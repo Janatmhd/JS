@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Calculatrice</title>
+</head>
+<body>
+    <header>
+       <nav class="header">
+            <ul>
+                <li><a href="./index.html">CALCULATRICE</a></li>
+                <li><a href="./cdd.html">CONVERTISSEUR DE DEVISE</a></li>
+                <li><a href="./facturation.html">FACTURATION</a></li>
+                <li><a href="./annimation.html">ANIMATION</a></li>
+            </ul>
+        </nav> 
+    </header>
+    <br> <br>
+    <main id="calculatrice">
+        <h1>BIENVENUE SUR MA CALCULATRICE</h1>
+        <div class="debut"></div>
+        <h2 id="resultat">0</h2>
+        <div class="ligne1">
+            <button onclick="effacer()"  style="width: 200px; background-color: #99CD31;">C</button>
+            <button onclick="pourcentage()">%</button>
+            <button onclick="afficher('/')">/</button>
+        </div>
+        <div class="ligne2">
+            <button onclick="afficher(7)">7</button>
+            <button onclick="afficher(8)">8</button>
+            <button onclick="afficher(9)">9</button>
+            <button onclick="afficher('*')" style="background-color: #0DB6AC;">X</button>
+        </div>
+        <div class="ligne3">
+            <button onclick="afficher(4)">4</button>
+            <button onclick="afficher(5)">5</button>
+            <button onclick="afficher(9)">6</button>
+            <button onclick="afficher('-')" style="background-color: #0DB6AC;">-</button>
+        </div>
+        <div class="ligne4">
+            <button onclick="afficher(1)">1</button>
+            <button onclick="afficher(2)">2</button>
+            <button onclick="afficher(3)">3</button>
+            <button onclick="afficher('+')" style="background-color: #0DB6AC;">+</button>
+        </div>
+        <div class="ligne5">
+            <button onclick="afficher(0)">0</button>
+            <button onclick="afficher('.')">,</button>
+            <button onclick="resoudre()" style="width: 220px; background-color: #99CD31;">=</button>
+        </div>
+        <div class="fin"></div>
+    </main> <br><br><br><br><br><br>
+    <footer>
+        <table>
+            <tr>
+                <td>
+                    <h3>Plan du Site</h3>
+                    <ul>
+                        <li><a href="./index.html">Calculatrice</a></li>
+                        <li><a href="./cdd.html">Convertisseur de devise</a></li>
+                        <li><a href="./facturation.html">Facturation</a></li>
+                        <li><a href="./annimation.html">Animation</a></li>
+                    </ul>
+                </td>
+                <td>
+                    <h3>RGPD</h3>
+                        <ul>
+                            <li><a href="./mentionslegales.html">Mentions légales</a></li>
+                            <li><a href="./pdg.html">Politique de confidentialité</a></li>
+                            <li><a href="./cgu.html">CGU</a></li>
+                            <li><a href="./pdc.html">Politique des cookies</a></li>
+                            <li><a href="./accessibilite.html">Accessibilité</a></li>
+                        </ul>
+                </td>
+            </tr>
+        </table>
+        <p>&#169; BASSIROU CISSE 2025. Tous droits réservés.</p>
+    </footer>
+    <script src="./assets/Js/script.js"></script>
+    <script src="./assets/Js/jquery-3.7.1.min.js"></script>
+</body>
+</html>

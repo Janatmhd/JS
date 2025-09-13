@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*----------------------------------header----------------------------------*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    z-index: 10; /* z-index permet de superposer le header au contenu */
+    background-color: #086E69; /* Couleur de fond du header */
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 150px; /* Espace entre les éléments du menu */
+    margin-left: 10%;
+}
+nav ul li{
+    list-style: none;
+    margin: 10px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+nav ul li a:hover{
+    color: gold;
+}
+
+/*------------------------calculatrice----------------------*/
+
+h1{
+    width: 40%;
+    text-align: center;
+    font-size: 4em;
+    margin-top: 100px; /* Espace pour le header */
+    margin-left: 30%;
+}
+
+.debut{
+    width: 450px;
+    height: 60px;
+    background-color: #0DB6AC;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    margin-top: 50px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+h2{
+    color: #0DB6AC;
+    width: 400px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    text-align: right;
+    font-size: 2em;
+}
+.ligne1, .ligne2, .ligne3, .ligne4, .ligne5 {
+    width: 450px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+button{
+    width: 110px;
+    height: 70px;
+    background-color: #0DB6AC;
+    color: black;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border: 2px solid black; /* Bordure pour le bouton */
+    cursor: pointer;
+}
+button:hover{
+    background-color: #01724E; /* Couleur de fond au survol */
+    color: white; /* Couleur du texte au survol */
+}
+.fin{
+    width: 450px;
+    height: 60px;
+    background-color: #0DB6AC;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-top: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+/*------------------------page convertisseur----------------------*/
+#convertisseur{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+#de, #vers, #convertir{
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    background-color: #0DB6AC;
+    color: black;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border: 1px solid black; /* Bordure pour le bouton */
+    cursor: pointer;
+}
+#montant{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background-color: #0DB6AC;
+    color: black;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border: 1px solid black; /* Bordure pour le bouton */
+    cursor: pointer;
+}
+#convertisseur2{
+    width: 100px;
+    height: 45%;
+    text-align: center;
+    background-color: #0DB6AC;
+    color: black;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border: 1px solid black; /* Bordure pour le bouton */
+    cursor: pointer;
+    padding: 12px;
+}
+#convertir{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid black; /* Bordure pour le bouton */
+    border-radius: 50px;
+    margin-top: 2%;
+}
+
+/*------------------------page animation----------------------*/
+#qsn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0DB6AC;
+    padding: 50px;
+}
+#qsn .image,
+#qsn .text{
+    width: 45%;
+    padding: 10px;
+}
+.image img{
+    width: 100%;
+    border-radius: 30px;
+}
+.text p{
+    color: white;
+    text-align: center;
+}
+@keyframes sortieGauche{
+    from{
+        transform: 100%;
+    }
+    to{
+        transform: 0;
+    }
+}
+/* #qsn .text{ 
+    animation: sortieDroite 2s ease-in-out;
+}*/ 
+@keyframes sortieDroite{
+    from{
+        margin-left: 150%;
+    }
+    to{
+        margin-letf: 0;
+    }
+}
+/*------------------------page facture----------------------*/
+#facturation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 100px;
+  padding: 20px;
+}
+
+#facturation, label {
+  display: block;
+  width: 70%;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+input[type="text"]{
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  background-color: lightgray;
+  border: 1px solid black;
+  text-align: center;
+}
+
+button, #GF {
+    width: 200px;
+    height: 50px;
+    margin-top: 30px;
+    background-color: #00b3b3;
+    color: black;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover, #GF {
+  background-color: #009999;
+}
+
+
+/*------------------------footer----------------------*/
+footer{
+    background-color: #01724E;
+    padding: 50px;
+    margin-top: 100px;
+}
+footer table{
+    width: 100%;
+    text-align: center;
+}
+h3{
+    font-size: 2.1em;
+    color: orange;
+}
+footer ul li{
+    list-style: none;
+    padding: 7px;
+}
+footer ul li a {
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+}
+footer ul li a:hover {
+    color: orange;
+}
+footer p{
+    text-align: center;
+    color: orange;
+    font-size: 1.4em;
+    padding: 10px;
+}
+
