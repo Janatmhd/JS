@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Cours JAVASCRIPT</title>
+</head>
+
+<body>
+    <H1>COURS JAVASCRIPT</H1>
+    <header id="sommaire">
+        <h2>SOMMAIRE:</h2>
+        <h3> <a href="#intro">1. Introduction</a></h3>
+        <h3> <a href="#deux">2. Premier pas</a></h3>
+        <h3> <a href="#trois">3. Les variables</a></h3>
+        <h3> <a href="#quatre">4. Actions navigateur</a></h3>
+        <h3> <a href="#cinq">5. Les opérateurs</a></h3>
+        <h3> <a href="#six">6. Les conversions</a></h3>
+        <h3> <a href="#sept">7. Les chaines de caractères</a></h3>
+        <h3> <a href="#huit">8. Les conditions</a></h3>
+        <h3> <a href="#neuf">9. Les boucles</a></h3>
+        <h3> <a href="#dix">10. Les tableaux</a></h3>
+        <h3> <a href="#onze">11. Les fonctions</a></h3>
+        <h3> <a href="#douze">12. Les objets</a></h3>
+        <h3> <a href="#treize">13. Manipulation du DOM</a></h3>
+        <h3> <a href="#quatorze">14. Date et Heure</a></h3>
+        <h3> <a href="#quinze">15. Les API</a></h3>
+    </header>
+    <main>
+        <div id="intro">
+            <H2>1. INTRODUCTION</H2>
+            <p>Javascript (à ne pas confondre avec java) est un langage de programmation dynamique et non typé (c'est à dire qu'une variable peut contenir n'importe quel type de valeur) utilisé le plus souvent pour le coté client mais peut etre utilisé aussi coté server (nodeJS). Javascript est communément appelé JS, elle est sensible à la casse, cela signifie que le langage considère les majuscules différents des miniscules. Les mots clés en JS sont tous en miniscules. <br>
+            Javascript a été créé en <b>1995</b> par <b>Brendan Eich</b> et intégré au navigateur Netscape navigator. <br>
+            Les fichiers JS seuls ne peuvent pas etre exécutés par le navigateur, il faut donc les integrer à une page html.</p>
+        </div>
+        <div id="deux">
+            <H2>2. Premier pas</H2>
+            <H3>2.1 Javascript dans le fichier HTML</H3>
+            <p>Dans un fichier .html, les codes Javascript peuvent etre écrits à l'intérieur des balises <b>script</b> qu'on place généralement dans le <b>head</b> accompagné de l'attribut <b>defer</b> ou tout en bas de la balise <b>body</b>. <br>
+            voir <a href="./javascript.html">Javascript.html</a> </p>
+            <H3>2.2 Javascript dans le fichier externe</H3>
+            <p>Les codes javascript sont ecrits dans un fichier externe généralement nommé <b>script.js</b>. Aucune balise ne sera utilisé dans ce fichier, il ne contiendra que du code javascript. <br>
+            Par contre il sera nécessaire d'importer ce fichier dans notre document hmtl pour pouvoir l'exécuter. <br>
+            voir <a href="./javascript.html">Javascript.html</a></p>
+            <H3>2.3 les commentaires en Javascript</H3>
+            <p>
+                les commentaires sont des lignes de textes placées dans le code et servant à documenter ce dernier, c'est à dire à expliquer ce que fait tel ou tel bout de script et éventuellement comment la manipuler. Un commentaire est donc une indication qui ne sera pas lu par les navigateurs, donc invisible pour les utilisateurs. <br>
+                Pour écrire un commentaire monoligne en Js, on utilise le double slash <b>//</b>. <br>
+                Pour les commentaires multilignes, on utilise slash et étoile pour entourer le texte du commentaire <b>/*commentaires*/</b>.
+            </p>
+            <H3>2.4 les mots clés Javascript</H3>
+            <p>
+                En programmation, un mot clé est un élément prédéfini du langage qu'on ne peut plus utiliser pour nommer une variable, un tableau, une fonction ... <br>
+                Voici ci-dessous la liste des mots clés du JS. <br>
+                <table border="1">
+                    <caption>Liste des mots clés du JS</caption>
+                    <tr>
+                        <td>let</td>
+                        <td>abstract</td>
+                        <td>boolean</td>
+                        <td>break</td>
+                        <td>byte</td>
+                    </tr>
+                    <tr>
+                        <td>case</td>
+                        <td>catch</td>
+                        <td>char</td>
+                        <td>class</td>
+                        <td>const</td>
+                    </tr>
+                    <tr>
+                        <td>continue</td>
+                        <td>debugger</td>
+                        <td>default</td>
+                        <td>delete</td>
+                        <td>do</td>
+                    </tr>
+                    <tr>
+                        <td>double</td>
+                        <td>else</td>
+                        <td>enum</td>
+                        <td>export</td>
+                        <td>extends</td>
+                    </tr>
+                    <tr>
+                        <td>false</td>
+                        <td>final</td>
+                        <td>float</td>
+                        <td>for</td>
+                        <td>function</td>
+                    </tr>
+                    <tr>
+                        <td>goto</td>
+                        <td>if</td>
+                        <td>implements</td>
+                        <td>import</td>
+                        <td>in</td>
+                    </tr>
+                    <tr>
+                        <td>int</td>
+                        <td>interface</td>
+                        <td>long</td>
+                        <td>native</td>
+                        <td>new</td>
+                    </tr>
+                    <tr>
+                        <td>null</td>
+                        <td>private</td>
+                        <td>package</td>
+                        <td>protected</td>
+                        <td>public</td>
+                    </tr>
+                    <tr>
+                        <td>return</td>
+                        <td>short</td>
+                        <td>static</td>
+                        <td>super</td>
+                        <td>switch</td>
+                    </tr>
+                    <tr>
+                        <td>this</td>
+                        <td>throw</td>
+                        <td>throws</td>
+                        <td>true</td>
+                        <td>object</td>
+                    </tr>
+                    <tr>
+                        <td>try</td>
+                        <td>typeof</td>
+                        <td>var</td>
+                        <td>void</td>
+                        <td>volatile</td>
+                    </tr>
+                    <tr>
+                        <td>while</td>
+                        <td>with</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </p>
+        </div>
+        <div id="trois">
+            <H2>3. Les variables</H2>
+            <H3>3.1 Définition</H3>
+            <p>
+                Comme vu précédemment en algorithmie, une variable est un conteneur servant à stocker des informations de manière temporaire. le propre d'une variable comme sont nom l'indique est donc de varier, c'est à dire de pouvoir contenir plusieurs valeurs au fil du temps. C'est bien cet aspect qui les rendent utiles cependant il faut bien differencier la variable qu'on appelle par son nom de la valeur qu'elle contienne.
+                Il n'y a pas d'égalité entre la variable et sa valeur meme si la syntaxe porte à confusion.
+            </p>
+            <H3>3.2 Déclaration</H3>
+            <p>
+                Pour déclarer une variable en JS, on utilise les mots clés <b>let</b> ou <b>var</b> suivi du nom de la variable. <br>
+                le nom d'une variable doit obligatoirement commencer par une lettre ou un underscore (_) et ne doit jamais commencer par un chiffre. <br>
+                Le nom d'une variable ne doit pas contenir d'espace, mais peut contenir des lettres, des chiffres, des tirets mais pas de caractères spéciaux. <br>
+                En JS, il recommandé d'utiliser le <b>camelCase</b> pour nommer les variables. <br>
+                <b><u>exemple:</u></b> let puitDuFou= "parc d'attraction";
+            </p>
+            <H3>3.3 Les types de variables</H3>
+            <p>
+                En javascript, on distingue 3 types de variables. <br>
+                <b>Numbers</b>: ce sont les variables de type numérique <br>
+                <b>Strings</b>: pour les chaines de caractères <br>
+                <b>Boolean</b> : pour le true or false
+            </p>
+            <H3>3.4 les types de valeurs</H3>
+            <p>
+                En JS, contrairement à la plus part des langages de programmation, nous n'avous pas besoin de préciser le type de variable à la déclaration. Le JS étant un langage non typé c'est la valeur qui permet de determiner le type de la variable. <br>
+                ci-dessous les types de valeurs: 
+                <ul>
+                    <li>String</li>
+                    <li>Number</li>
+                    <li>Boolean</li>
+                    <li>Null</li>
+                    <li>Object</li>
+                    <li>undefined</li>
+                </ul>
+                <b>NB:</b> On peut utiliser la fonction prédéfinie <b>typeof</b> pour déterminer le type de valeur ou de variable. <br>
+                Voir <a href="./javascript.html">javascript.html</a>
+            </p>
+            <H3>3.5 Les constantes</H3>
+            <p>
+                Une constante est un conteneur tout comme la variable mais sa valeur ne change jamais. <br>
+                <b><u>Exemple:</u></b> PI, le nom d'un pays, la date de naissance d'une personne ... <br>
+                Voir <a href="./javascript.html">javascript.html</a>
+            </p>
+        </div>
+        <div id="quatre">
+            <H2>4. Actions sur le navigateur</H2>
+            <H3>4.1 Instruction de lecture</H3>
+            <p>
+                <ul>
+                    <li><b>Prompt():</b> permet de récuperer la saisie de l'utilisateur</li>
+                    <li><b>Confirm():</b> permet de récuperer une confirmation ou non de l'utilisateur</li>
+                </ul>
+                voir <a href="./javascript.html">javascript.html</a>
+            </p>
+            <H3>4.2 Instruction d'écriture</H3>
+            <p>
+                <ul>
+                    <li><b>alert():</b> permet d'afficher un message à l'écran dans une fenetre pop-up</li>
+                    <li><b>document.write():</b> Bien que devenu obsolete, elle permet d'ecrire sur la page html</li>
+                    <li><b>console.log():</b> permet d'écrire sur la console</li>
+                </ul>
+            </p>
+        </div>
+        <div id="cinq">
+            <H2>5. Les opérateurs</H2>
+            <H3>5.1 Opérateurs de concaténation</H3>
+            <p>
+                le <b>+</b> et la <b>,</b> sont utilisés pour concaténer differentes valeurs en une seule sortie. <br>
+                le <b>+</b> est utilisé pour les fenetres pop-up qui ne gèrent la virgule. <br>
+                la <b>,</b> est plus utlisé sur le document.write et la console.
+            </p>
+            <H3>5.2 Opérateurs arithmétiques</H3><br>
+            <table border="1">
+                <tr>
+                    <td><b>+</b>: addition</td>
+                    <td><b>-</b>: soustraction</td>
+                    <td><b>*</b>: multiplication</td>
+                    <td><b>/</b>: division</td>
+                </tr>
+                <tr>
+                    <td><b>%</b>: modulo</td>
+                    <td><b>**</b>: puissance</td>
+                    <td><b>++</b>: incrementation</td>
+                    <td><b>--</b>: décrementation</td>
+                </tr>
+            </table>
+            <p><b><u>Exemple: </u></b>Voir <a href="./javascript.html">javascript.html</a></p>
+            <H3>5.3 Opérateurs d'affectation</H3><br>
+            <table border="1">
+                <tr>
+                    <td><b>=</b> affectation simple</td>
+                    <td><b>+=</b> addition suivi d'affectation</td>
+                    <td><b>-=</b> soustraction suivi d'affectation</td>
+                </tr>
+                <tr>
+                    <td><b>*=</b> multiplication suivi d'affectation</td>
+                    <td><b>/=</b> division suivi d'affectation</td>
+                    <td><b>%=</b> modulo suivi d'affectation</td>
+                </tr>
+            </table>
+            <p><b><u>Exemple: </u></b>Voir <a href="./javascript.html">javascript.html</a></p>
+            <H3>5.4 Opérateurs de comparaison</H3><br>
+            <table border="1">
+                <tr>
+                    <td><b>==</b>: égalité</td>
+                    <td><b>===</b> : identicité (compare valeur et type)</td>
+                    <td><b>></b> : supérieur</td>
+                    <td><b>&lt;</b> : inférieur</td>
+                </tr>
+                <tr>
+                    <td><b>>=</b> : supérieur ou égale</td>
+                    <td><b>&lt;=</b> : inférieur ou égale</td>
+                    <td><b>!=</b> : différent</td>
+                    <td></td>
+                </tr>
+            </table>
+            <H3>5.5 Opérateurs logiques</H3><br>
+            <table border="1">
+                <tr>
+                    <td><b>&&</b> : et</td>
+                    <td><b>||</b> : ou</td>
+                    <td><b>!</b> : non</td>
+                </tr>
+            </table>
+            <H3>5.6 Opérateur ternaire</H3>
+            <p>L'opérateur ternaire en JS est un opérateur conditionnel, il fonctionne avec 3 élements. <br>
+            la condition, les instructions si la condition est vérifiée et les instructions si la condition est fausse. <br>
+            C'est comme la condition alternative si, sinon. <br>
+            <b><u>Syntaxe :</u></b> (condition)? instructions vraie : instructions fausse </p>
+        </div>
+        <div id="six">
+            <H2>6. Les conversions</H2>
+            <p>
+                La fonction <b>Number()</b> est utilisée pour convertir les chaines de caractères en nombre. <br>
+                la fonction <b>ParseFloat()</b> est un doublon de la fonction <b>Number()</b>. <br>
+                la fonction <b>ParseInt</b> est utilisée pour convertir les chaines de caractères et les décimales en entier. <br>
+                la fonction <b>String()</b> permet de convertir les nombres en chaine de caractères.
+            </p>
+            <p><b><u>Exemple: </u></b>Voir <a href="./javascript.html">javascript.html</a></p>
+        </div>
+        <div id="sept">
+            <H2>7. Les chaines de caractères</H2>
+            <p>
+                javascript propose plusieurs méthodes pour les chaines de caractères y compris des méthodes de style. <br>
+                document.write(chaine.toLowerCase()); //miniscule<br>
+                document.write(chaine.toUpperCase()); //Majuscule<br>
+                document.write(chaine.strike()); //pour barrer<br>
+                document.write(chaine.bold()); //pour mettre en gras<br>
+                document.write(chaine.small()); //pour réduire<br>
+                document.write(chaine.fontcolor("green")); //pour changer la couleur<br>
+                document.write(chaine.fontsize("40px")); //taille typo<br>
+                document.write(chaine.length); //longueur de la chaine<br>
+                <b><u>Exemple: </u></b>Voir <a href="./javascript.html">javascript.html</a>
+            </p>
+        </div>
+        <div id="huit">
+            <H2>8. Les conditions</H2>
+            <H3>8.1 condition simple (if)</H3>
+            <p>
+                Comme vu en algo, la condition simple teste une condition et exécute une instruction ou un bloc d'instructions que si la condition est vérifiée. <br>
+                <b><u>Exemple: </u></b>Voir <a href="./javascript.html">javascript.html</a>
+            </p>
+            <H3>8.2 condition alternative (if else)</H3>
+            <p>
+                La condition alternative <b> if else</b> teste une condition, exécuté des instructions si la condition est vérifiée ou d'autres instructions si elle est fausse. <br>
+                <b><u>Exemple: </u></b>Voir <a href="./javascript.html">javascript.html</a>
+            </p>
+            <H3>8.3 condition multiple (if else if else)</H3>
+            <p>
+                La particularité du JS, c'est qu'il n'existe pas de mot clé <b>elseif</b> donc les conditions ne s'imbrque pas, elles se mettent à la suite. <br>
+                <b><u>Exemple: </u></b>Voir <a href="./javascript.html">javascript.html</a>
+            </p>
+            <H3>8.4 condition multiple (switch case)</H3>
+            <p>
+                Le switch case évalue une expression et selon la valeur de l'expression exécute les instructions qui lui sont associées sinon l'instruction par défaut. <br>
+                <b><u>Exemple: </u></b>Voir <a href="./javascript.html">javascript.html</a>
+            </p>
+        </div>
+        <div id="neuf">
+            <H2>9. Les boucles</H2>
+            <H3>9.1 la boucle for</H3>
+            <p>
+                L'instruction <b>for</b> permet de créer une boucle avec 3 éléments séparés par des points virgules et entourés par des parentheses suivi d'une pair d'accolades contenant l'ensemble des instructions à exécuter. <br>
+                Le premier élément est la condition de départ, le second la condition d'arret et le dernier le pas.  <br>
+                <b><u>Exemple: </u></b>Voir <a href="./javascript.html">javascript.html</a>  
+            </p>
+            <H4>9.1.1 le break et continue</H4>
+            <p>
+                Les instructions <b>break</b> et <b>continue</b> sont très importantes pour manipuler les boucles. <br>
+                le break permet d'arreter la boucle à l'itération ciblée. <br>
+                le continue permet de sauter l'itération ciblée et de poursuivre la boucle par la suite. <br>
+                <b><u>Exemple: </u></b>Voir <a href="./javascript.html">javascript.html</a>  
+            </p>
+            <H3>9.2 la boucle for in </H3>
+            <p>
+                l'instruction <b>for in</b> permet d'iterer les indices associés aux valeurs d'un tableau.
+            </p>
+            <H3>9.3 la boucle for of </H3>
+            <p>
+                l'instruction <b>for of</b> permet d'iterer les valeurs d'un tableau.
+            </p>
+            <H3>9.4 la boucle for each</H3>
+            <p>
+                l'instruction <b>forEach</b> permet d'iterer en meme temps les indices et les valeurs d'un tableau.
+            </p>
+            <H3>9.5 la boucle while</H3>
+            <p>
+                L'instruction <b>while</b> permet de créer une boucle, elle teste d'abord une condition et execute les instructions tant que la condition est vérifiée. <br>
+                <b><u>Exemple: </u></b>Voir <a href="./javascript.html">javascript.html</a>  
+            </p>
+            <H3>9.6 la boucle do while</H3>
+            <p>
+                L'instruction <b> do while</b> permet de créer une boucle qui s'exécute tantque la condition est vérifiée. elle exécute d'abord les instructions ensuite teste la condition ce qui veut dire qu'avec le do while les instructions s'exécutent au moins une fois. <br>
+                <b><u>Exemple: </u></b>Voir <a href="./javascript.html">javascript.html</a>  
+            </p>
+        </div>
+        <div id="dix">
+            <H2>10. Les tableaux</H2>
+            <H3>10.1 les tableaux à une dimension</H3>
+            <p>
+                Un tableau est un conteneur qui peut contenir plusieurs valeurs de type différent, indépendantes ou liées entre elles. <br>
+                Les differentes valeurs d'un tableau sont stoquées dans des cases qu'on identifie avec des indices qui vont de 0 à n (nombre d'élément du tableau). Un tel tableau est appelé <b>tableau indéxé</b>. <br>
+                Dans la programmation orientée objet, un tableau herite de la class <b>array</b> donc un tableau est un objet <b>array</b>. <br>
+                <b><u>Exemple: </u></b>Voir <a href="./javascript.html">javascript.html</a>  
+            </p>
+            <H3>10.2 les méthodes de l'objet Array</H3>
+            <p> 
+            <ul>
+                <li>tab1.pop(); //permet de supprimer le dernier element du tableau</li>
+                <li>tab1.shift(); //permet de supprimer le premier element du tableau</li>
+                <li>tab1.push("Camil"); //permet d'ajouter un element à la fin du tableau</li>
+                <li>tab1.unshift("Janat"); //permet d'ajouter un element au début du tableau</li>
+                <li>tab1.splice(2, 0, "Boris", "Jacques", "Marie", "Paulette", "Jade"); //permet d'ajoiuter des elements à partir d'un indice ciblé (inclu) du tableau</li>
+                <li>tab1.splice(2, 2); //permet supprimer des elements à partir d'un indice ciblé (inclu) du tableau</li>
+            </ul>
+            </p>
+            <H3>10.3 les tableaux multidimentionnels</H3>
+            <p>
+                Comme abordé en algo, un tableau multidimentionnel n'est rien d'autre qu'un tableau de tableaux. <br>
+                Les memes principes sont applicables aussi bien aux tableaux simples qu'aux tableaux multidimentionnels. Cependant on aura besoin d'autant de boucles que de tableaux pour parcourir un tableau multidimentionnel. <br>
+                <b><u>Exemple:</u></b> Voir <a href="./javascript.html">javascript.html</a>
+            </p>
+        </div>
+        <div id="onze">
+            <H2>11. Les fonctions</H2>
+            <h3>11.1. Definition:</h3>
+            <p>
+                Une fonction est un groupe de ligne de code de programmation, écrites par un concepteur et destinées à
+                exécuter une tâche bien spécifique.<br>
+                On appelle fonction un sous-programme qui permet d’effectuer un ensemble d’instructions par simple appel
+                de la fonction dans le corps du programme principal. <br>
+                Une fonction est un groupe de ligne(s) de code de programmation destiné à exécuter une tâche bien
+                spécifique et que l’on pourra, si besoin utiliser à plusieurs reprises. <br>
+                En JavaScript, il existe deux types de fonctions : Les fonctions prédéfinies et les fonctions déclarées.
+            </p>
+            <h3>11.2. Les fonctions prédéfinies:</h3>
+            <p>
+                En Javascript il existe un certains nombres de fonctions prédifinies, elles sont souvent associées à un
+                objet c'est pour ce là qu'on les appelle méthodes. <br>
+                Les fonctions <b>alert(), prompt(), confirm ...</b> sont associées à l'objet <b>window</b>, donc elles
+                sont des méthodes de l'objet <b>window.</b> <br>
+                Les fonctions <b>pop(), push(), shift()...</b> sont quant à elles des métodes de l'objet <b>Array.</b>
+            </p>
+            <h3>11.3. Les fonctions déclarées:</h3>
+            <p>
+                Elles sont les fonctions mises en place par le programmeur selon les besoins de l'application pour
+                effectuer une tache bien précise. <br>
+            </p>
+            <h4>Syntaxe:</h4>
+            <p>
+                function nom_de_la_fonction(les arguments){ --- les instructions --- }
+            </p>
+            <h4>Fonctions fléchées syntaxe:</h4>
+            <p>
+                (les arguments) => { --- les instructions --- }
+            </p>
+            <h4>Appel d'une fonction:</h4>
+            <p>
+                Pour appeler la fonction, il faut bien sûr qu’elle ait été définie auparavant. Par conséquent, il est
+                conseillé de commencer la définition de la fonction et les appels dans le corps de page.
+                L’appel d’une fonction se fait par son identifiant suivi impérativement de parenthèses, lesquelles
+                peuvent contenir les arguments à faire passer. <br> Peut avoir lieu à n’importe quel endroit de la page
+                :
+                <br> - dans d’autres fonctions, <br> - dans le corps de la page.
+            </p>
+        </div>
+        <div id="douze">
+            <H2>12. Les objets</H2>
+            <p>
+                JavaScript est conçu autour d'un paradigme simple, basé sur les objets. Un objet est un ensemble de
+                propriétés et de méthodes. Une propriété est une association entre un nom (aussi appelé clé) et une valeur. La valeur
+                d'une propriété peut être une fonction, auquel cas la propriété peut être appelée « méthode ». En plus
+                des objets natifs fournis par l'environnement, il est possible de construire ses propres objets. <br>
+                Javascript n'utilisait pas d'instruction de class comme d'autres langages de programmation orientée Objet
+                comme java, c++, ... Il utilisait les fonctions comme instruction de class. <br>
+                Mais depuis <b>ES6</b> (ECMAScript) le standard qui définit les normes de javascript publié en <b>2015</b>, l'instruction <b>class</b> est présente et permet de construire des objets. <br>
+                - A l'intérieur de la fonction ou de la class, on utilise: this.propriété. <br>
+                - A l'extérieur de la fonction ou de la class, on utilise: instance.propriété. <br>
+                <u><b>Exemple:</b></u> voir <a href="./javascript.html">javascript.html</a>
+            </p>
+        </div>
+<div id="treize">
+            <H2>13. Manipulation du DOM</H2>
+            <h3>13.1. Les selecteurs:</h3>
+            <p>
+            <ul>
+                <li>document.querySelector</li>
+                <li>document.querySelectorAll</li>
+                <li>document.getElementById</li>
+                <li>document.getElementsByClassName</li>
+                <li>document.getElementsByTagName</li>
+            </ul>
+            </p>
+            <h3>13.2. Les evenements:</h3>
+            <p>
+            <ul>
+                <li>Click <span>quand on click sur la souris</span></li>
+                <li>dblclick <span> double click</span></li>
+                <li>mousedown <span>clique sur n'importe quel bouton de la souris</span></li>
+                <li>mouseup <span>lorsqu'on relache un bouton de la souris</span></li>
+                <li>mouseenter <span>lorsqu'on rentre dans le champ de l'élément</span></li>
+                <li>mouseleave <span>lorsqu'on quitte le champ de l'élément</span></li>
+                <li>mouseout <span>lorsqu'on quitte le champ de l'élément</span></li>
+                <li>mousemove <span>lorsqu'on déplace la souris</span></li>
+                <li>mouseover <span>lorsqu'on survole le champ de l'élément</span></li>
+                <li>keypress <span>lorsqu'on appuit sur une touche du clavier</span></li>
+                <li>keydown <span>lorsqu'on reste appuyer sur une touche</span></li>
+                <li>keyup <span>lorsqu'on relache la touche</span></li>
+                <li>scroll <span>lorsqu'on scroll la page</span></li>
+                <li>load <span>Chargement de la page</span></li>
+                <li>input <span>lorsqu'on saisie dans un champ input</span></li>
+                <li>submit <span>Soumission d’un formulaire</span></li>
+                <li>focus <span>Élément gagne le focus dans un champ input</span></li>
+                <li>blur <span>Élément perd le focus dans un champ input</span></li>
+
+            </ul>
+            </p>
+        </div>
+        <div id="quatorze">
+            <H2>14. Date et Heure</H2>
+            <p>
+                La manipulation des dates et des heures en JavaScript repose principalement sur l’objet intégré Date. <br>
+                <table border="1">
+                    <tr>
+                        <th>Syntaxe</th>
+                        <th>Résultat</th>
+                    </tr>
+                    <tr>
+                        <td>new Date()</td>
+                        <td>Date actuelle</td>
+                    </tr>	
+                    <tr>
+                        <td>new Date("YYYY-MM-DD")</td>
+                        <td>Date spécifique</td>
+                    </tr>	
+                    <tr>
+                        <td>new Date(année, mois, jour, heure, minute, seconde, milliseconde)</td>
+                        <td>Composants personnalisés</td>
+                    </tr>	
+                        <th>Méthode</th>
+                        <th>Résultat</th>
+                    </tr>	
+                    <tr>
+                        <td>getFullYear()</td>
+                        <td>Année (ex. 2025)</td>
+                    </tr>	
+                    <tr>
+                        <td>getMonth()</td>
+                        <td>Mois (0 = janvier, 11 = décembre)</td>
+                    </tr>	
+                    <tr>
+                        <td>getDate()</td>
+                        <td>Jour du mois</td>
+                    </tr>	
+                    <tr>
+                        <td>getDay()</td>
+                        <td>Jour de la semaine (0 = dimanche)</td>
+                    </tr>	
+                    <tr>
+                        <td>getHours()</td>
+                        <td>Heure locale</td>
+                    </tr>	
+                    <tr>
+                        <td>getUTCHours()</td>
+                        <td>Heure UTC</td>
+                    </tr>	
+                    <tr>
+                        <td>getTime()</td>
+                        <td>Timestamp en millisecondes depuis 1970</td>
+                    </tr>	
+                </table>
+                
+
+            </p>
+        </div>
+        <div id="quinze">
+            <H2>15. Les API</H2>
+            <p>
+                API signifie Application Programming Interface et est un concept qui n'est ni limité ni spécifique à
+                JavaScript , mais qui est utilisé dans presque tous les langages d'application Web. En tant que
+                développeur Web, vous devez connaître l'API. <br>
+                En tant que concept, l'API existe depuis plus de 50 ans, mais ces dernières années, elle est devenue
+                très populaire et a décrit une méthode différente pour créer nos applications. <br>
+                Le but de l'API est de permettre la communication entre les applications en tant qu'intermédiaire , les
+                deux applications pouvant avoir été créées avec des outils et des technologies différents. Cela peut
+                être réalisé en utilisant des normes API telles que REST, SOAP, qui décrivent des protocoles ou des
+                ensembles de règles que le client (qui doit appeler) et le serveur (qui répond aux demandes du client)
+                doivent suivre. Ces normes sont essentielles à la communication. Ces normes décrivent à quoi devrait
+                ressembler une requête et le format dans lequel le client doit attendre une réponse du serveur. <br>
+                REST (Representational State Transfer) est un ensemble de principes architecturaux. SOAP (Simple Object
+                Access Protocol) est un protocole officiel géré par le W3C (World Wide Web Consortium). La principale
+                différence entre les deux est que SOAP est un protocole, REST non. En général, les API suivent
+                l'approche REST ou SOAP en fonction de leur utilisation et des préférences du développeur.<br><br>
+                <b><u>API REST</u></b> <br>
+                Une API web est dite "REST" ou “Restful” si elle a les caractéristiques suivantes: <br>
+                - Les requêtes sont envoyées sous forme de requêtes HTTP: <br>
+                - Méthodes HTTP: GET, POST, PUT, PATCH, DELETE... <br>
+                - Un Endpoint ou une route: http://example.com/api/ressources <br>
+                - Les requêtes doivent être envoyées avec un MIME*/Content-type spécifique tel: JSON, XML, HTML, etc.
+                <br> <br>
+                <b> Contraintes d’une API REST</b> <br>
+                Une API Restful doit respecter certaines contraintes d’architecture: <br>
+                1. Archi client-serveur: chacun évolue indépendamment. <br>
+                2. Serveur sans états (stateless): pas de sessions. <br>
+                3. Utilisation du cache: le client sait combien de temps il peut garder les données qu’il reçoit avant
+                expiration. <br>
+                4. Une interface uniforme: un seul id, contient l’URL des ressources suivantes... <br>
+                5. Archi en couches: Réduire la complexité de l’architecture globale de l’API. <br>
+                6. Code à la demande: étendre les fonctionnalités du client. <br>
+                <br> <br>
+                <b><u>Ressources</u></b> <br>
+                En REST tout est resources, on interagit avec les ressources à travers différents routes (URLs): <br>
+                - http://example.com/products <br>
+                - http://example.com/products/1 <br>
+                - http://example.com/products/1/description <br>
+                Pour interagir avec une ressource, il suffit d’utiliser la méthode
+                HTTP e'"adéquate : <br>
+                - GET http://example.com/products/1 (Récupérer) <br>
+                - POST http://example.com/products (Créer) <br>
+                - PUT ou PATCH http://example.com/products/1 (Mettre à jour) <br>
+                - DELETE http://example.com/products/1 (Effacer) <br><br>
+
+                <u><b>Fetch</b></u> <br>
+                L’API Fetch comporte une seule fonction, concise et facile à utiliser fetch('url', 'options'); <br>
+                ● fetch prend en paramètre l’URL de la ressource que vous voulez consulter et des options si besoin.
+                <br>
+                ● Elle retourne une Promesse. <br> <br>
+                <u><b>Les Promesses:</b></u> <br>
+                Fetch retourne une promesse qui peut être dans un des états suivants: <br>
+                ● pending: état initial, promesse non-exécutée <br>
+                ● fulfilled: la promesse a été exécutée correctement <br>
+                ● rejected: la promesse a rencontrée une erreur <br>
+                On attache un gestionnaire à une promesse via .then() <br>
+                fetch('images.txt').then(response => console.log(response.status)); <br><br>
+
+                <b><u> API SOAP : Simple Object Access Protocol</u></b> <br>
+                SOAP est un protocole standard initialement conçu pour que des applications développées avec différents
+                langages sur différentes plateformes puissent communiquer. Comme il s'agit d'un protocole, il impose des
+                règles intégrées qui augmentent la complexité et les coûts, ce qui peut ralentir le chargement des
+                pages. Cependant, ces standards assurent la conformité et sont ainsi privilégiés pour certains scénarios
+                d'entreprise. Les standards de conformité intégrés incluent la sécurité, l'atomicité, la cohérence,
+                l'isolement et la durabilité (ACID), un ensemble de propriétés qui permet d'assurer des transactions de
+                base de données fiables. <br>
+
+                Voici les principales spécifications de services web : <br>
+
+                WS-Security (Web Services Security) : spécification qui standardise la manière dont les messages sont
+                sécurisés et transférés via des identifiants uniques appelés jetons. <br>
+                WS-ReliableMessaging : spécification qui standardise la gestion des erreurs entre les messages
+                transférés par le biais d'une infrastructure informatique non fiable. <br>
+                WS-Adressing (Web Services Addressing) : spécification qui ajoute les informations de routage des
+                paquets en tant que métadonnées dans des en-têtes SOAP, au lieu de les conserver plus en profondeur dans
+                le réseau. <br>
+                WSDL (Web Services Description Language) : décrit la fonction d'un service web ainsi que ses limites.
+                <br><br>
+                Lorsqu'une requête de données est envoyée à une API SOAP, elle peut être gérée par n'importe quel
+                protocole de couches de l'application : HTTP (pour les navigateurs web), SMTP (pour les e-mails), TCP et
+                autres. En revanche, suite à la réception de la requête, les messages SOAP doivent être renvoyés sous la
+                forme d'un document XML, un langage balisé lisible aussi bien par les humains que par les machines. Une
+                fois finalisée, une requête destinée à une API SOAP ne peut pas être mise en cache par un navigateur. Il
+                n'est donc pas possible d'y accéder plus tard sans la renvoyer vers l'API.
+            </p>
+            <p>
+                <u><b>A savoir:</b></u> <br>
+                <li><b>JSON: </b> Javascript Object Notation est un format d'échange de données.</li>
+                <li><b>CORS: </b> Cross-Origin Resource Sharing est un mécanisme qui permet à des ressources restreintes
+                    d'une page web d'etre récupérées par un autre domaine exterieur au domaine à partir duquel la
+                    première ressource a servie. Le CORS permet de prendre en charge des requetes multi-origines
+                    sécurisées et des transfert de données.</li>
+                <li><b>MIME: </b> Multiporpose Internet Mail Extensions est un standard permettant d'indiquer la nature
+                    et le format d'un document.</li>
+            </p>
+        </div>
+    </main>
+    <br><br><br><br><br>
+</body>
+</html>

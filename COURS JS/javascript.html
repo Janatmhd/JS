@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript exemples</title>
+    <link rel="icon" href="data:,">
+    <!-- <script defer>
+        document.write("<h1>Bienvenue sur Javascript</h1>");
+    </script> -->
+    <style>
+        body{
+            position: relative;
+        }
+        .visuel{
+            background-color:
+             green;
+            color: yellow;
+        }
+        #souris{
+            height: 100px;
+            width: 100px;
+            border-radius: 50px;
+            background-color: brown;
+            opacity: 0.4;
+            z-index: -1;
+            position: absolute;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1 onclick="cacher()"> Manipulation du DOM</h1>
+    <h2 onclick="afficher()"> Je suis le premier h2</h2> -->
+    <div id="affdate"></div>
+    <h1> Manipulation du DOM</h1>
+    <p id="souris"></p>
+    <div id="increment"></div>
+    <button id="plus">+</button>
+    <button id="moins">-</button>
+    <table>
+        <tr>
+            <td><label for="euro">Euros</label></td>
+            <td></td>
+            <td><label for="dollar">Dollars</label></td>
+        </tr>
+        <tr>
+            <td> <input type="text" id="euro"></td>
+            <td>&gt;</td>
+            <td><input type="text" id="dollar"></td>
+        </tr>
+    </table>
+    <form action="">
+        <label for="prenom"></label>
+        <input type="text" required id="prenom" placeholder="Jean">
+        <input type="submit" value="Envoyer">
+    </form>
+    <br>
+   <audio src="./assets/sons/generique.mp3" preload="auto" controls></audio>
+
+    <div class="exos">
+        <h2 id="chvol">JE SUIS LE H3 QUI CHANGE DE COULEUR</h2>
+        <button style="background-color: green; color: white;" onclick="changerCouleur(green)">vert</button> 
+        <button style="background-color: yellow; color: white;" onclick="changerCouleur(green)">vert</button>
+        <button style="background-color: red; color: white;" onclick="changerCouleur(green)">vert</button>
+        <button onclick="grossir">grossir le texte</button>
+        <button onclick="diminuer">diminuer le texte</button>
+    </div>
+    <h2 id="deuzio"> Je suis le premier h2</h2>
+    <h2>Je suis le deuxième h2</h2>
+    <h2>Je suis le troisième h2</h2>
+    <p class="para">Je suis un paragraphe <span>Je suis un span du paraghraphe</span></p>
+    <p class="para">Je suis le deuxiéme paragraphe</p>
+    <p id="parag">Je suis un paragraphe</p>
+    <ul>
+        <li>premier li</li>
+        <li>deuxième li</li>
+        <li>troisième li</li>
+    </ul>
+    <!-- <script>
+        document.write("<h1>Aurevoir merci d'avoir vu le Javascript</h1>");
+    </script>  -->
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
