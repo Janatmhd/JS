@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*---------------------------------header----------------------------------*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    z-index: 10; /* z-index permet de superposer le header au contenu */
+}
+header .logo{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.logo img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.logo p{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 1px 2px green;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+nav ul li{
+    list-style: none;
+    margin: 10px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    text-shadow: 2px 1px 2px green;
+}
+nav ul li a:hover{
+    color: gold;
+}
+
+/*--------------------------------banniere----------------------------------*/
+#banniere{
+    position: relative;
+    text-align: center;
+}
+#banniere img{
+    width: 100%;
+    height: 80vh;
+    opacity: 0.8;
+}
+.textban{
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    width: 100%;
+}
+h1{
+    font-size: 4em;
+    color: green;
+    text-shadow: 2px 2px 2px gold;
+    text-align: center;
+    left: 50%;
+    margin-bottom: 3%;
+    /* transform: translateX(-50%); */
+}
+.btn{
+    padding: 10px 20px;
+    background-color: green;
+    color: gold;
+    border-radius: 30px;
+    text-decoration: none;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*---------------------------------qsn----------------------------------*/
+#qsn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: green;
+    padding: 50px;
+}
+#qsn .image,
+#qsn .text{
+    width: 45%;
+    padding: 10px;
+}
+.image img{
+    width: 100%;
+    border-radius: 30px;
+}
+.text p{
+    color: white;
+    text-align: center;
+}
+@keyframes sortieGauche{
+    from{
+        transform: 100%;
+    }
+    to{
+        transform: 0;
+    }
+}
+/* #qsn .text{
+    animation: sortieDroite 2s ease-in-out;
+} */
+@keyframes sortieDroite{
+    from{
+        margin-left: 150%;
+    }
+    to{
+        margin-left: 0;
+    }
+}
+
+h2{
+    font-size: 3em;
+    color: gold;
+    background-color: green;
+    padding: 30px;
+    text-align: center;
+    margin-top: 40px;
+}
+h3{
+    font-size: 2em;
+    color: green;
+    text-shadow: 2px 2px 2px gold;
+    text-align: left;
+    padding: 10px;
+    background-color: white;
+    margin-bottom: 21px;
+}
+
+/*---------------------------------services----------------------------------*/
+h4{
+    font-size: 1.5em;
+    color: gold;
+    text-shadow: 2px 2px 2px green;
+    text-align: left;
+    padding: 10px;
+    background-color: white;
+    margin-bottom: 10px;
+    text-align: center;
+}
+#services{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 40px;
+}
+.service{
+    width: 27%;
+    padding: 20px;
+    border: 2px solid green;
+    border-radius: 30px;
+    text-align: center;
+}
+.service img{
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    height: 350px;
+}
+.service p{
+    background-color: green;
+    color: white;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+/* .s2{
+    animation: sortirHaut 2s ease-in-out;
+} */
+
+@keyframes sortirHaut{
+    from{
+        margin-top: -150%;
+    }
+    to{
+        margin-top: 0;
+    }
+}
+
+/*---------------------------------Articles----------------------------------*/
+#blog{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: green;
+    padding: 50px;
+}
+.article{
+    width: 20%;
+    padding: 20px;
+    border: 2px solid gold;
+    border-radius: 30px;
+}
+
+.article img{
+    width: 100px;
+    height: 80px;
+    float: left;
+    border-radius: 15px;
+}
+.article h4{
+    background-color: transparent;
+}
+.article p{
+    color: white;
+}
+@keyframes sortiEBas{
+    from{
+        margin-top: 150%;
+    }
+    to{
+        margin-top: 0;
+    }
+}
+/*------------------------contact----------------------*/
+.contact{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: green;
+    padding: 50px;
+    position: relative;
+}
+.contact aside{
+    width: 45%;
+}
+.contact iframe{
+    width: 100%;
+    height: 600px;
+    border: 0;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.contact table{
+    width: 100%;
+}
+.contact input{
+    width: 100%;
+    height: 30px;
+    padding-bottom: 10px;
+}
+.contact textarea{
+    width: 100%;
+    height: 140px;
+    resize: none;
+}
+.contact label{
+    color: gold;
+    font-size: 1em;
+}
+.contact label span{
+    font-size: 1.4em;
+    font-weight: bold;
+    color: red;
+}
+#envoie{
+    padding-bottom: 30px;
+    width: 30%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.reussi{
+    width: 250px;
+    background-color: green;
+    color: white;
+    position: absolute;
+    font-size: 1.5em;
+    padding: 20px;
+    border: 2px solid gold;
+    border-radius: 15px;
+    text-align: center;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
